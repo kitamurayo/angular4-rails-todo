@@ -1,0 +1,10 @@
+<br>
+<app-todo></app-todo>
+<hr>
+<ul class="list-group">
+  <li *ngFor="let todo of todos; let i = index"
+      class="list-group-item justify-content-between">
+      {{todo.title}}
+      <div style="cursor: pointer;" (click)="deleteTodo(todo.id, i)" ><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i></div>
+  </li>
+</ul>
